@@ -1,0 +1,19 @@
+/* Container Grid Layout */
+.container {
+    display: grid; // Enable CSS Grid layout
+    
+    /* Define the rows in the grid */
+    grid-template-rows: 0 100vh auto; 
+    // First row: height 0 (usually for spacing or a gap)
+    // Second row: full viewport height (100vh), typically used for a main section or hero area
+    // Third row: automatic height based on content (usually for footer or additional content)
+    
+    /* Define the columns in the grid */
+    grid-template-columns: [full-start]1fr 
+    [center-start]repeat(8,[col-start] minmax(min-content, 14rem)[col-end])[center-start] 1fr [full-end];
+    // Column definitions:
+    // - [full-start]1fr: Start with 1 fractional unit (typically used for outer padding)
+    // - [center-start]repeat(8,[col-start] minmax(min-content, 14rem)[col-end]): Create 8 columns with a minimum width of content and a maximum width of 14rem, and add start and end labels for the center columns
+    // - [center-start]1fr: A fractional unit for additional space to the right of the columns
+    // - [full-end]: End label for the grid
+}

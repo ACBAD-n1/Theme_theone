@@ -1,0 +1,170 @@
+/* Header Styles */
+.header {
+    background-color: #000; // Set background color to black for the header
+    grid-column: full-start / full-end; // Span the full width of the grid
+}
+
+/* Navbar Container Styles */
+/* Initial state of the navbar (transparent background) */
+nav {
+    background-color: transparent; // Transparent background by default
+    padding: 0; // No padding
+    width: 100%; // Full width
+    position: fixed; // Fixed positioning at the top of the page
+    top: 0; // Position at the top
+    left: 0; // Align to the left
+    z-index: 1000; // Ensure navbar is on top of other elements
+    transition: background-color 0.3s ease, padding 0.3s ease; // Smooth transition for background color and padding changes
+    box-shadow: none; // No shadow by default
+
+    a:visited {
+        color: #fff;
+    }
+}
+
+/* When the navbar is scrolled (solid background) */
+nav.scrolled {
+    background-color: $color-secondary; // Change background color to secondary color when scrolled
+    box-shadow: 0 0 1rem #000; // Add a shadow for a slight elevation effect
+}
+
+/* Navbar Container */
+.nav-container {
+    max-width: 1200px; // Maximum width of the container
+    margin: 0 auto; // Center the container horizontally
+    display: flex; // Use flexbox layout
+    justify-content: space-between; // Space items evenly between start and end
+    align-items: center; // Align items vertically in the center
+}
+
+.all-navigation-items {
+    display: flex;
+}
+
+/* Brand Logo */
+.nav-logo {
+    color: #fff; // Set text color to white
+    font-size: 1.5rem; // Font size for the logo
+    font-weight: bold; // Make the font bold
+
+    img {
+        height: 5rem; // Set logo image height
+        width: 100%; // Make image width responsive to parent container
+    }
+}
+
+/* Main Navigation Styles */
+ul.nav-menu {
+    list-style: none; // Remove default list styling
+    margin: 0;
+}
+
+
+ul.nav-menu li {
+    margin-right: 1rem; // Space between menu items
+}
+
+ul.nav-menu li a {
+    color: white; // Set link text color to white
+    text-decoration: none; // Remove underline from links
+    font-size: 1rem; // Font size for menu links
+    padding: 0.5rem 1rem; // Padding around the text
+    transition: background-color 0.3s ease; // Smooth transition for background color changes
+}
+
+ul.nav-menu li a:hover {
+    background-color: $color-primary !important; // Change background color on hover
+}
+
+ul.nav-menu li a:hover {
+    background-color: #fff; // Change background color on hover
+}
+
+/* Dropdown Menu Styles */
+ul.nav-menu li .dropdown {
+    position: relative; // Relative positioning for the dropdown
+}
+
+ul.nav-menu li .dropdown-content {
+    display: none; // Hide dropdown content by default
+    position: absolute; // Absolute positioning relative to the parent
+    background-color: #444; // Background color for the dropdown
+    min-width: 160px; // Minimum width of the dropdown
+    z-index: 1; // Ensure dropdown is above other content
+    top: 100%; // Position below the parent item
+}
+
+ul.nav-menu li .dropdown-content a {
+    color: white; // Set text color for dropdown links
+    display: block; // Make links block-level for full-width
+    padding: 0.75rem 1rem; // Padding inside dropdown links
+    text-decoration: none; // Remove underline from links
+}
+
+ul.nav-menu li .dropdown-content a:hover {
+    background-color: #666; // Change background color on hover
+}
+
+ul.nav-menu li:hover .dropdown-content {
+    display: block; // Show dropdown content on hover of parent item
+}
+
+/* Nav Menu Alignment */
+.nav-menu {
+    display: flex; // Use flexbox layout
+    align-items: center; // Align items vertically in the center
+
+    button {
+        i {
+            padding: 0 1rem 0 0; // Add right padding to icon inside button
+        }
+    }
+}
+
+// Personnalyse Log In Boostrap Incon
+.bi-person-circle::before {
+    content: "\f4d7";
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Mobile Menu Styles (hidden by default) */
+.mobile-menu-icon {
+    display: none; // Hide mobile menu icon by default
+    color: white; // Set icon color to white
+    font-size: 2rem; // Font size for the mobile menu icon
+    cursor: pointer; // Pointer cursor to indicate clickability
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+    ul.nav-menu {
+        display: none; // Hide menu items by default on mobile
+        flex-direction: column; // Stack menu items vertically
+        justify-content: center; // Center items vertically
+        align-items: center; // Center items horizontally
+        width: 100%; // Full width
+        background-color: #333; // Background color for mobile menu
+        position: absolute; // Absolute positioning relative to parent
+        left: 0; // Align to the left
+        top: 100%; // Position below the navbar
+        padding: 1rem 0; // Padding inside mobile menu
+    }
+
+    ul.nav-menu.active {
+        display: flex; // Show menu items when active
+    }
+
+    ul.nav-menu li {
+        margin: 0 auto; // Center menu items horizontally
+        text-align: center; // Center text inside menu items
+        padding: .5rem 0; // Padding inside menu items
+        width: 100%; // Full width for menu items
+    }
+
+    .mobile-menu-icon {
+        display: block; // Show mobile menu icon on mobile
+    }
+
+
+}

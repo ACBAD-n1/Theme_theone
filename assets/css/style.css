@@ -1,0 +1,672 @@
+/* Color Variables */
+/* Primary color used for important elements such as buttons, highlights, and key accents. */
+/* Secondary color used for background or secondary elements, providing contrast against the primary color. */
+/* Text color used for general text to ensure readability and contrast against the background. */
+/* Global body styling */
+/* Remove default margin and padding to ensure consistency across browsers */
+@import url("https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap");
+body {
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
+  /* Remove default padding */
+  /* Ensure that the width and height of elements include padding and borders */
+  box-sizing: border-box;
+  /* Makes width and height calculations more predictable */
+  /* Prevent horizontal scrollbars from appearing */
+  overflow-x: hidden;
+  /* Hides any content that overflows horizontally */ }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* Black Button Styles */
+.btn__black {
+  border: none;
+  background-color: #A238FF;
+  padding: .5rem 2rem;
+  color: #fff;
+  border-radius: 5rem;
+  cursor: pointer;
+  position: relative;
+  transition: all .3s; }
+  .btn__black a {
+    color: #fff;
+    text-decoration: none; }
+  .btn__black i {
+    padding: 0 1rem 0 0;
+    font-size: 1.2rem; }
+
+/* Hover State for the Black Button */
+.btn__black:hover {
+  color: #A238FF;
+  background-color: #222323;
+  box-shadow: 0 0 0.2rem #A238FF; }
+  .btn__black:hover a {
+    color: #A238FF; }
+
+/* Header Styles */
+.header {
+  background-color: #000;
+  grid-column: full-start / full-end; }
+
+/* Navbar Container Styles */
+/* Initial state of the navbar (transparent background) */
+nav {
+  background-color: transparent;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  box-shadow: none; }
+  nav a:visited {
+    color: #fff; }
+
+/* When the navbar is scrolled (solid background) */
+nav.scrolled {
+  background-color: #222323;
+  box-shadow: 0 0 1rem #000; }
+
+/* Navbar Container */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.all-navigation-items {
+  display: flex; }
+
+/* Brand Logo */
+.nav-logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold; }
+  .nav-logo img {
+    height: 5rem;
+    width: 100%; }
+
+/* Main Navigation Styles */
+ul.nav-menu {
+  list-style: none;
+  margin: 0; }
+
+ul.nav-menu li {
+  margin-right: 1rem; }
+
+ul.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease; }
+
+ul.nav-menu li a:hover {
+  background-color: #A238FF !important; }
+
+ul.nav-menu li a:hover {
+  background-color: #fff; }
+
+/* Dropdown Menu Styles */
+ul.nav-menu li .dropdown {
+  position: relative; }
+
+ul.nav-menu li .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 160px;
+  z-index: 1;
+  top: 100%; }
+
+ul.nav-menu li .dropdown-content a {
+  color: white;
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none; }
+
+ul.nav-menu li .dropdown-content a:hover {
+  background-color: #666; }
+
+ul.nav-menu li:hover .dropdown-content {
+  display: block; }
+
+/* Nav Menu Alignment */
+.nav-menu {
+  display: flex;
+  align-items: center; }
+  .nav-menu button i {
+    padding: 0 1rem 0 0; }
+
+.bi-person-circle::before {
+  content: "\f4d7";
+  font-size: 1.5rem;
+  color: #fff; }
+
+/* Mobile Menu Styles (hidden by default) */
+.mobile-menu-icon {
+  display: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer; }
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  ul.nav-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 1rem 0; }
+  ul.nav-menu.active {
+    display: flex; }
+  ul.nav-menu li {
+    margin: 0 auto;
+    text-align: center;
+    padding: .5rem 0;
+    width: 100%; }
+  .mobile-menu-icon {
+    display: block; } }
+
+/* Footer Styles */
+.footer {
+  grid-column: full-start / full-end;
+  background-color: #353535;
+  padding: 2rem 5rem;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Footer Content Section */
+  /* Footer Bottom Section */ }
+  .footer__content {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 2.5rem 0; }
+    .footer__content-about {
+      padding: 0 15rem 0 0; }
+    .footer__content p {
+      color: #C3C3C3; }
+  .footer__foot {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    border-top: .2rem solid #fff;
+    padding: 2.5rem 0 0 0; }
+    .footer__foot-cards span i {
+      margin: 0 .5rem;
+      font-size: 1.5rem;
+      color: #A238FF; }
+    .footer__foot span i {
+      cursor: pointer;
+      transition: all .3s; }
+    .footer__foot span i:hover {
+      font-size: 2rem;
+      color: #fff; }
+
+.site-info a {
+  color: #fff;
+  text-decoration: none;
+  transition: all .3s; }
+
+.site-info a:visited {
+  color: #fff;
+  text-decoration: none; }
+
+.site-info a:hover {
+  color: #A238FF;
+  transform: skew(20deg); }
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem; }
+    .footer__content {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0 2.5rem 0; }
+      .footer__content-about {
+        padding: 0 1rem 0 0; } }
+
+/* Container Grid Layout */
+.container {
+  display: grid;
+  /* Define the rows in the grid */
+  grid-template-rows: 0 100vh auto;
+  /* Define the columns in the grid */
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-start] 1fr [full-end]; }
+
+.account {
+  grid-column: 1 / -1;
+  background-color: #222323;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  display: none; }
+
+/* FAQ Section Styling */
+.faq {
+  grid-column: full-start / full-end;
+  background-color: #222323;
+  min-height: 100vh;
+  height: 100%;
+  padding: 5rem 5rem 10rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  color: #fff;
+  /* Heading styling */
+  /* FAQ tab styling */
+  /* Hover effect for FAQ tab */
+  /* Expand content when input is checked */
+  /* Space below the FAQ section */ }
+  .faq h1 {
+    font-family: "Karantina", system-ui;
+    font-size: 3rem; }
+  .faq__tab {
+    position: relative;
+    background-color: #353535;
+    box-shadow: 0 0 1rem #00000041;
+    border-radius: 1rem;
+    padding: .5rem 1rem 1rem 1rem;
+    margin: 1rem 0;
+    /* Number circle styling */
+    /* Question heading styling */
+    /* Answer paragraph styling */
+    /* Hidden content styling */
+    /* Remove default radio button styling */
+    /* Label styling */
+    /* Plus sign indicator styling */ }
+    .faq__tab a:visited {
+      color: fff; }
+    .faq__tab span {
+      background-color: #fff;
+      padding: .5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #A238FF;
+      font-weight: 700; }
+    .faq__tab h3 {
+      color: #C3C3C3;
+      font-family: "Karantina", system-ui;
+      font-size: 1.5rem;
+      font-weight: 400;
+      padding: 0 .5rem; }
+    .faq__tab p {
+      padding: 0 2.5rem; }
+    .faq__tab .content {
+      max-height: 0;
+      transition: all 1s;
+      overflow: hidden; }
+    .faq__tab input {
+      appearance: none; }
+    .faq__tab label {
+      display: flex;
+      align-items: center; }
+    .faq__tab label::after {
+      content: '+';
+      position: absolute;
+      right: 2rem;
+      top: 1rem;
+      font-size: 2rem;
+      color: #A238FF;
+      transition: all 1s; }
+  .faq__tab:hover label::after {
+    color: #fff; }
+  .faq__tab input:checked ~ label::after {
+    transform: rotate(135deg); }
+  .faq__tab input:checked ~ .content {
+    max-height: 100vh; }
+  .faq__space {
+    padding: 5rem 0; }
+
+/* Media Query for screens 768px and smaller */
+@media (max-width: 768px) {
+  .faq {
+    padding: 2rem 2rem 5rem 2rem;
+    /* Plus sign indicator styling */ }
+    .faq label::after {
+      content: '+';
+      position: absolute;
+      right: 1rem;
+      top: 0rem;
+      font-size: 2rem;
+      color: #A238FF;
+      transition: all 1s; } }
+
+/* Hero Section Styling */
+.hero {
+  /* Full-width grid layout with custom column span */
+  grid-column: full-start / full-end;
+  background-color: #222323;
+  /* Layout: Two equal columns */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Hero Content Styling */
+  /* Hero Image Styling */ }
+  .hero a:visited {
+    color: #fff; }
+  .hero__content {
+    /* Flexbox for vertical and horizontal alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0 3.5rem;
+    color: #fff;
+    z-index: 10;
+    text-shadow: 0 0 2rem #000;
+    /* Span styling inside hero content */
+    /* Heading 1 styling */
+    /* Paragraph text styling */ }
+    .hero__content a:visited {
+      color: fff; }
+    .hero__content span {
+      font-size: 1.2rem; }
+    .hero__content h1 {
+      font-family: "Karantina", system-ui;
+      font-size: 3rem; }
+    .hero__content p {
+      color: #C3C3C3;
+      text-shadow: 0 0 1rem #000; }
+  .hero__image img {
+    /* Positions image absolutely within the hero section */
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 60%;
+    left: 63.5%;
+    transform: translate(-50%, -50%); }
+
+/* Media Query for screens 1022px and smaller */
+@media (max-width: 1022px) {
+  .hero__image {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .hero__image img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      top: 50%;
+      left: 65%;
+      transform: translate(-50%, -50%); } }
+
+/* Media Query for screens 768px and smaller */
+@media (max-width: 768px) {
+  .hero {
+    display: flex; }
+    .hero__content {
+      justify-content: center; }
+    .hero__image img {
+      display: none; } }
+
+/* Benefits Section Styling */
+.benefits {
+  /* Full-width grid layout with three columns and two rows */
+  grid-column: full-start / full-end;
+  background-color: #353535;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto auto;
+  align-items: stretch;
+  padding: 2rem 5rem;
+  gap: 2rem;
+  color: #fff;
+  /* Title styling spanning across all columns */
+  /* Subheading styling */
+  /* Paragraph styling */
+  /* Styling for the first list of benefits */
+  /* Styling for the central image */
+  /* Styling for the second list of benefits */ }
+  .benefits h2 {
+    grid-column: 1 / -1;
+    text-align: start; }
+  .benefits h3 {
+    font-size: 1rem; }
+  .benefits p {
+    color: #C3C3C3;
+    font-size: .9rem; }
+  .benefits__list-1 {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-self: stretch;
+    border-left: .2rem solid #fff;
+    padding: 0 0 0 1rem; }
+  .benefits__image {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%; }
+    .benefits__image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: top; }
+  .benefits__list-2 {
+    grid-column: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-self: stretch;
+    border-right: .2rem solid #fff;
+    padding: 0 1rem 0 0; }
+
+/* Media Query for screens 768px and smaller */
+@media (max-width: 768px) {
+  .benefits {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 5rem 5rem;
+    /* Adjustments for smaller screens */ }
+    .benefits__list-1, .benefits__image, .benefits__list-2 {
+      grid-column: 1 / -1; } }
+
+/* Demo Section Styling */
+.demo {
+  grid-column: full-start / full-end;
+  background-color: #222323;
+  padding: 2rem 5rem 2rem 0;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* Paragraph styling */
+  /* Anchor link styling */
+  /* Image container styling */
+  /* Content container styling */ }
+  .demo p {
+    color: #C3C3C3; }
+  .demo a {
+    text-decoration: none;
+    color: #fff; }
+  .demo a:active,
+  .demo a:visited {
+    color: #fff; }
+  .demo__image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+  .demo__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0 2rem; }
+
+/* Media Query for screens 768px and smaller */
+@media (max-width: 768px) {
+  .demo {
+    grid-template-columns: 1fr;
+    /* Adjust padding for content on smaller screens */ }
+    .demo__content {
+      padding: 0 4rem 3rem 4rem; } }
+
+/* Testimonials Section Styling */
+.testimonials {
+  grid-column: full-start / full-end;
+  background-color: #353535;
+  padding: 7.5rem 5rem;
+  color: #fff;
+  /* Title styling */
+  /* Paragraph styling */
+  /* Content grid layout */ }
+  .testimonials h2 {
+    font-size: 2rem;
+    padding: 0 0 2rem 0; }
+  .testimonials p {
+    color: #C3C3C3; }
+  .testimonials__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5rem;
+    padding: 0 5rem;
+    /* Card styling within content */
+    /* Hover effect for cards */ }
+    .testimonials__content-card {
+      background-color: #222323;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+      box-shadow: 0 0 1rem #00000065;
+      box-sizing: border-box;
+      word-wrap: break-word;
+      cursor: pointer;
+      transition: all .3s;
+      /* Quote icon styling within card */
+      /* Stars styling within card */ }
+      .testimonials__content-card--quote i {
+        font-size: 5rem;
+        color: #A238FF; }
+      .testimonials__content-card--stars {
+        color: #A238FF; }
+    .testimonials__content-card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 1rem #A238FF; }
+
+/* Media Query for screens 1022px and smaller */
+@media (max-width: 1022px) {
+  .testimonials__content {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    row-gap: 2rem;
+    padding: 0; }
+    .testimonials__content-card {
+      box-shadow: 0 0 1rem #00000065; } }
+
+/* Media Query for screens 768px and smaller */
+@media (max-width: 768px) {
+  .testimonials__content {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    row-gap: 2rem;
+    padding: 0; }
+    .testimonials__content-card {
+      box-shadow: 0 0 1rem #00000065; } }
+
+/* Call to Action Section Styling */
+.cta {
+  grid-column: full-start / full-end;
+  background-color: #222323;
+  height: 100%;
+  color: #fff;
+  /* Content grid layout within CTA section */ }
+  .cta__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* Image styling within content */
+    /* Text styling within content */ }
+    .cta__content-image {
+      grid-column: 1 / 2; }
+      .cta__content-image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; }
+    .cta__content-text {
+      grid-column: 2 / 3;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      padding: 0 4rem;
+      /* Heading styling */
+      /* Paragraph styling */ }
+      .cta__content-text a:active,
+      .cta__content-text a:visited {
+        color: #fff;
+        border: none; }
+      .cta__content-text h2 {
+        font-size: 1.8rem; }
+      .cta__content-text p {
+        color: #C3C3C3; }
+
+/* Media Query for screens 768px and smaller */
+@media (max-width: 768px) {
+  .cta__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Reorder text and image */ }
+    .cta__content-text {
+      order: 1;
+      padding: 7rem 5rem;
+      grid-column: 1 / -1; }
+    .cta__content-image {
+      grid-column: 1 / -1;
+      order: 2; } }
+
+.site-main {
+  grid-column: full-start / full-end;
+  background-color: #222323;
+  padding: 5rem;
+  min-height: 100vh;
+  height: 100%;
+  color: #fff; }
+  .site-main a {
+    text-decoration: none;
+    color: #A238FF; }
+  .site-main a:hover {
+    color: #fff; }
+  .site-main a:visited {
+    color: fff; }
+  .site-main button a {
+    color: #fff; }
+
+#post-17 {
+  background-color: #353535;
+  box-shadow: 0 0 1rem #00000083;
+  padding: 5rem; }
+
+body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button:not(.is-link) {
+  background-color: #222323;
+  color: #A238FF;
+  transition: all .3s; }
+
+body:not(.woocommerce-block-theme-has-button-styles):hover .wc-block-components-button:not(.is-link):hover {
+  background-color: #A238FF;
+  color: #fff; }
+
+mark, ins {
+  color: #A238FF;
+  padding: .5rem; }
+
+@media (max-width: 635px) {
+  .is-medium table.wc-block-cart-items .wc-block-cart-items__row, .is-mobile table.wc-block-cart-items .wc-block-cart-items__row, .is-small table.wc-block-cart-items .wc-block-cart-items__row {
+    display: flex !important;
+    flex-wrap: wrap; } }

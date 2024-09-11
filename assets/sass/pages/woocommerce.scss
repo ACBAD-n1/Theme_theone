@@ -1,0 +1,30 @@
+#post-17 {
+    background-color: #353535; // Dark background color for the footer
+    box-shadow: 0 0 1rem #00000083;
+    padding: 5rem;
+}
+
+body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button:not(.is-link) {
+    background-color: $color-secondary;
+    color: $color-primary;
+
+    transition: all .3s;
+}
+
+body:not(.woocommerce-block-theme-has-button-styles):hover .wc-block-components-button:not(.is-link):hover {
+    background-color: $color-primary;
+    color: #fff
+}
+
+mark, ins {
+    color: $color-primary;
+    padding: .5rem;
+}
+
+
+@media (max-width: 635px) {
+    .is-medium table.wc-block-cart-items .wc-block-cart-items__row, .is-mobile table.wc-block-cart-items .wc-block-cart-items__row, .is-small table.wc-block-cart-items .wc-block-cart-items__row  {
+        display: flex !important;
+        flex-wrap: wrap;
+    }
+}

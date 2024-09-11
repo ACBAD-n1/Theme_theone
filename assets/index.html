@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Icons: Version 1.11.3, used for adding scalable vector icons to the theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- AOS (Animate on Scroll) CSS: Version 2.3.1, used to style elements for AOS scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Animate.css: Version 4.1.1, provides pre-built CSS animations for use in the theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Custom Theme Stylesheet: Contains all the custom styling for the website -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>The One</title>
+</head>
+<body class="container">
+
+
+    <header class="header">
+        
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="nav-container">
+                <!-- Brand/Logo -->
+                <div class="nav-logo">
+                    <a href="index.html"><img src="img/logo.png" alt=""></a>
+                </div>
+
+                <!-- Mobile Menu Icon -->
+                <div class="mobile-menu-icon" onclick="toggleMenu()">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu">
+                    <li><a href="faq.html">Faq</a></li>
+                    <li><a href="#"><i class="bi bi-person-circle"></i> Log in</a></li>
+                    <li><button class="btn__black"><a href="#"><i class="bi bi-bag-fill"></i>Buy Now</a></button></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+   <!-- Hero section: Main call-to-action area of the landing page -->
+    <div class="hero">
+
+        <!-- Hero content: Text section including the heading, description, and CTA button -->
+        <div class="hero__content" data-aos="fade-right" data-aos-duration="2000">
+            
+            <!-- Main heading: Introduces the product with a focus on boosting sales -->
+            <h1><span>Boost Your Online Sales </span><br>With the Ultimate WordPress Theme!</h1>
+
+            <!-- Description: Provides more details about the theme's performance and conversion benefits -->
+            <p>
+                Crafted for Performance, Built for Conversions – Sell 
+                Products Effortlessly with Our Customizable and 
+                Responsive Theme.
+            </p>
+
+            <!-- Call-to-action button: Prompts users to get started with the product -->
+            <button class="btn__black animate__animated animate__backInUp animate__delay-2s">
+                Get Started Now
+            </button>
+        </div>
+
+        <!-- Hero image: Visual representation or branding element to accompany the text -->
+        <div class="hero__image">
+            <img src="img/hero.png" alt="Hero Image">
+        </div>
+
+    </div>
+
+
+<!-- Benefits section: Showcases the advantages of using the WordPress theme -->
+<div class="benefits">
+
+    <!-- Section heading: Introduces the benefits of the WordPress theme -->
+    <h2 data-aos="fade-right" data-aos-duration="1500">
+        Why Choose Our WordPress Theme?
+    </h2>
+
+    <!-- Benefits List 1: Highlights key features of the theme -->
+    <div class="benefits__list-1">
+        
+        <!-- Card 1: Optimized for sales conversion, with clean layouts and fast performance -->
+        <div class="benefits__list-1--card" data-aos="fade-up">
+            <h3>Optimized for Sales</h3>
+            <p>
+                Our theme is designed to help you convert visitors 
+                into customers with high-speed performance, 
+                clean layouts, and optimized user journeys.
+            </p>
+        </div>
+
+        <!-- Card 2: Fully customizable, no coding required to adjust the design and functionality -->
+        <div class="benefits__list-1--card" data-aos="fade-up">
+            <h3>Fully Customizable</h3>
+            <p>
+                With easy-to-use options, tweak the design, layout, 
+                and functionality to perfectly suit your brand without 
+                touching a single line of code.
+            </p>
+        </div>
+
+        <!-- Card 3: Mobile-responsive, ensuring an optimized shopping experience on all devices -->
+        <div class="benefits__list-1--card" data-aos="fade-up">
+            <h3>Mobile-Responsive</h3>
+            <p>
+                Deliver a flawless shopping experience on all devices, 
+                from desktops to smartphones, ensuring maximum engagement 
+                wherever your customers are.
+            </p>
+        </div>
+    </div> <!-- End of Benefits List 1 -->
+
+    <!-- Benefits Image: Adds a visual element to the section -->
+    <div class="benefits__image">
+        <img src="img/benefites.png" alt="">
+    </div>
+
+    <!-- Benefits List 2: Additional features that enhance the theme's value -->
+    <div class="benefits__list-2">
+
+        <!-- Card 4: SEO-friendly design, helping users rank higher on search engines -->
+        <div class="benefits__list-2--card" data-aos="fade-up" data-aos-duration="2000">
+            <h3>SEO-Friendly</h3>
+            <p>
+                Built with SEO best practices in mind, get better rankings 
+                and attract organic traffic with a theme that Google loves.
+            </p>
+        </div>
+
+        <!-- Card 5: WooCommerce-ready, allowing users to easily set up an eCommerce store -->
+        <div class="benefits__list-2--card" data-aos="fade-up" data-aos-duration="2000">
+            <h3>WooCommerce Ready</h3>
+            <p>
+                Seamlessly integrated with WooCommerce, giving you full control 
+                to create your ideal eCommerce store.
+            </p>
+        </div>
+        
+    </div> <!-- End of Benefits List 2 -->
+
+</div> <!-- End of Benefits section -->
+
+   
+<!-- Demo Section: Allows users to preview the theme in real-time -->
+<div class="demo">
+
+    <!-- Demo Image: Displays a visual representation of the theme -->
+    <div class="demo__image">
+        <img src="img/Demo-section.png" alt="">
+    </div>
+
+    <!-- Demo Content: Provides information and call-to-action for viewing the live demo -->
+    <div class="demo__content" data-aos="fade-left" data-aos-duration="3000">
+        <!-- Section Heading: Encourages users to explore the theme's functionality -->
+        <h2>See It in Action</h2>
+
+        <!-- Description: Highlights the key benefits of the live demo, such as fluid design, fast loading, and easy navigation -->
+        <p>
+            Preview our theme in real-time and explore its features. 
+            Experience the fluid design, fast loading times, and intuitive navigation 
+            that will set your online store apart.
+        </p>
+
+        <!-- Button: Leads users to the live demo of the theme -->
+        <button class="btn__black animate__animated animate__backInUp animate__delay-3s">
+            <a href="#">View Live Demo</a>
+        </button>
+    </div>
+    
+</div> <!-- End of Demo Section -->
+
+    
+
+    <!-- Testimonials Section: Showcasing customer feedback to build trust with potential buyers -->
+<div class="testimonials">
+    
+    <!-- Section Heading: Highlights the trust and reliability of the theme based on user feedback -->
+    <h2>Trusted by Online <br> Sellers Everywhere</h2>
+
+    <div class="testimonials__content">
+        
+        <!-- Testimonial Card 1: Displays feedback from a satisfied customer (Jane, TheFashionSpot.com) -->
+        <div class="testimonials__content-card" data-aos="fade-right" data-aos-duration="2500">
+            <!-- Quotation Mark Icon: Visually emphasizes the testimonial -->
+            <span class="testimonials__content-card--quote"><i class="bi bi-quote"></i></span>
+
+            <!-- Testimonial Text: Customer feedback about the theme's impact on sales and customization -->
+            <p>
+                "This theme completely transformed
+                my online store. The customization
+                options allowed me to tailor it
+                exactly to my brand, and my sales
+                have doubled!"
+            </p>
+
+            <!-- Customer Name and Website: Adds authenticity to the testimonial -->
+            <h4>Jane, Owner of <br>TheFashionSpot.com </h4>
+
+            <!-- Star Rating: Visual representation of the customer's satisfaction -->
+            <span class="testimonials__content-card--stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </span>
+        </div>
+
+        <!-- Testimonial Card 2: Displays feedback from a different customer (Mike, TechGadgetsStore) -->
+        <div class="testimonials__content-card" data-aos="fade-up" data-aos-duration="3500">
+            <!-- Quotation Mark Icon: Visually emphasizes the testimonial -->
+            <span class="testimonials__content-card--quote"><i class="bi bi-quote"></i></span>
+
+            <!-- Testimonial Text: Customer feedback about ease of use and SEO benefits -->
+            <p>
+                "I've never used a theme so easy to set up. 
+                Within hours, my store was live, and the 
+                built-in SEO features helped 
+                me rank higher in search engines."
+            </p>
+
+            <!-- Customer Name and Website: Adds authenticity to the testimonial -->
+            <h4>Mike, Founder of <br>TechGadgetsStore</h4>
+
+            <!-- Star Rating: Visual representation of the customer's satisfaction -->
+            <span class="testimonials__content-card--stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </span>
+        </div>
+
+        <!-- Testimonial Card 3: Repeats the feedback from Jane for symmetry and layout purposes -->
+        <div class="testimonials__content-card" data-aos="fade-left" data-aos-duration="2500">
+            <!-- Quotation Mark Icon: Visually emphasizes the testimonial -->
+            <span class="testimonials__content-card--quote"><i class="bi bi-quote"></i></span>
+
+            <!-- Testimonial Text: Customer feedback about theme's impact on sales and customization -->
+            <p>
+                "This theme completely transformed
+                my online store. The customization
+                options allowed me to tailor it
+                exactly to my brand, and my sales
+                have doubled!"
+            </p>
+
+            <!-- Customer Name and Website: Adds authenticity to the testimonial -->
+            <h4>Jane, Owner of <br>TheFashionSpot.com </h4>
+
+            <!-- Star Rating: Visual representation of the customer's satisfaction -->
+            <span class="testimonials__content-card--stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </span>
+        </div>
+
+    </div>
+</div> <!-- End of Testimonials Section -->
+
+
+<!-- Call-to-Action Section: Encourages users to take immediate action (purchase the theme) -->
+<div class="cta">
+
+    <!-- CTA Content Wrapper: Groups the image and text for the call-to-action -->
+    <div class="cta__content">
+
+        <!-- CTA Image: Visual element to support the call-to-action message -->
+        <div class="cta__content-image">
+            <img src="img/call-to-action.png" alt="">
+        </div>
+
+        <!-- CTA Text: Compelling message to encourage users to make a purchase -->
+        <div class="cta__content-text" data-aos="fade-left" data-aos-duration="2500">
+            
+            <!-- Headline: Strong and persuasive heading to draw attention -->
+            <h2>Ready to Skyrocket Your Sales?</h2>
+            
+            <!-- Description: Brief text explaining the benefits and encouraging users to act -->
+            <p>
+                Get the perfect solution for your ecommerce store today. 
+                Enjoy seamless functionality, fast performance, and top-tier support.
+            </p>
+
+            <!-- CTA Button: Directs the user to make a purchase -->
+            <button class="btn__black"> Buy Now </button>
+        </div> <!-- End of CTA Text -->
+    </div> <!-- End of CTA Content -->
+</div> <!-- End of Call-to-Action Section -->
+
+
+<!-- Footer Section: Provides additional information about the theme and support options -->
+<footer class="footer">
+
+    <!-- Footer Content: Contains theme description and support information -->
+    <div class="footer__content">
+
+        <!-- About the Theme: Brief description of the theme's purpose and features -->
+        <div class="footer__content-about" data-aos="fade-right" data-aos-duration="2500">
+            <h3>About the Theme</h3>
+            <p>
+                Our custom WordPress theme is designed to help online sellers create
+                beautiful, high-converting stores. Built from scratch, it's optimized for
+                performance, customization, and seamless integration with
+                WooCommerce.
+            </p>
+        </div>
+
+        <!-- Support Information: Contact details and support options for customers -->
+        <div class="footer__content-support" data-aos="fade-left" data-aos-duration="3500">
+            <h3>Support</h3>
+            <p>
+                Have questions or need help? Contact our support team at
+                support@adamboureima.com or visit our Support Center.
+            </p>
+        </div>
+
+    </div> <!-- End of Footer Content -->
+
+    <!-- Footer Bottom Section: Contains copyright notice and accepted payment icons -->
+    <div class="footer__foot">
+
+        <!-- Copyright Notice: Displays the ownership and year of the theme -->
+        <div class="footer__foot-copy">
+            © 2024 Adam Boureima. All rights reserved.
+
+        </div>
+
+        <!-- Payment Icons: Indicates the types of payment methods accepted -->
+        <div class="footer__foot-cards">
+            <span>
+                <i class="bi bi-card-heading"></i>
+                <i class="bi bi-credit-card-fill"></i>
+                <i class="bi bi-credit-card"></i>
+                <i class="bi bi-credit-card-2-front-fill"></i>
+            </span>
+        </div>
+
+    </div> <!-- End of Footer Bottom Section -->
+</footer> <!-- End of Footer Section -->
+
+    
+
+</body>
+
+<!-- jQuery Library: Version 3.7.1, used for simplifying JavaScript operations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+</script>
+
+<!-- AOS (Animate on Scroll) Library: Version 2.3.1, used for adding scroll animations to elements -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Custom JavaScript File: Contains custom scripts for handling theme-specific functionality -->
+<script src="js/scripts.js"></script>
+
+</html>

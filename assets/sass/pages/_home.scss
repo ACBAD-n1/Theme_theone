@@ -1,0 +1,423 @@
+/* Hero Section Styling */
+.hero {
+    /* Full-width grid layout with custom column span */
+    grid-column: full-start / full-end;
+    background-color: $color-secondary; // Secondary color background for the hero section
+
+    /* Layout: Two equal columns */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+    a:visited {
+        color: #fff;
+    }
+
+    /* Hero Content Styling */
+    &__content {
+
+        /* Flexbox for vertical and horizontal alignment */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 0 3.5rem; // Adds horizontal padding to content
+        color: #fff; // White text color for contrast
+        z-index: 10; // Ensures content appears above the image
+        text-shadow: 0 0 2rem #000; // Adds text shadow for better readability over the background
+
+        a:visited {
+            color: fff;
+        }
+
+        /* Span styling inside hero content */
+        span {
+            font-size: 1.2rem; // Small text for emphasis
+        }
+
+        /* Heading 1 styling */
+        h1 {
+            font-family: "Karantina", system-ui; // Custom font for the heading
+            font-size: 3rem; // Large font size for emphasis
+        }
+
+        /* Paragraph text styling */
+        p {
+            color: $text-color; // Uses predefined text color
+            text-shadow: 0 0 1rem #000; // Adds subtle text shadow for readability
+        };
+    }
+
+    /* Hero Image Styling */
+    &__image {
+       
+        img {
+            /* Positions image absolutely within the hero section */
+            position: absolute;
+            width: 100%; // Full-width image
+            height: auto; // Maintains aspect ratio
+            top: 60%; // Position adjustment
+            left: 63.5%; // Horizontal positioning adjustment
+            transform: translate(-50%, -50%); // Centers the image within the section
+        }
+    }
+}
+
+/* Media Query for screens 1022px and smaller */
+@media (max-width: 1022px) {
+
+    .hero {
+    
+        &__content {
+            // No changes needed for content in this breakpoint
+        }
+    
+        &__image {
+            display: flex;
+            justify-content: center; // Centering the image
+            align-items: center; // Vertically aligning the image
+           
+            img {
+                position: absolute;
+                width: 100%; // Full-width image for responsiveness
+                height: auto; // Maintains aspect ratio
+                top: 50%; // Adjusts position for smaller screens
+                left: 65%; // Horizontal adjustment for better centering
+                transform: translate(-50%, -50%); // Ensures the image remains centered
+            }
+        }
+    }
+}
+
+/* Media Query for screens 768px and smaller */
+@media (max-width: 768px) {
+
+    .hero {
+        display: flex; // Changes grid to flex for smaller screens
+
+        &__content {
+            justify-content: center; // Centers the content vertically for smaller screens
+        }
+
+        &__image {
+           
+            img {
+                display: none; // Hides the image on small screens for better mobile performance
+            }
+        }
+    }
+}
+
+
+
+
+/* Benefits Section Styling */
+.benefits {
+    /* Full-width grid layout with three columns and two rows */
+    grid-column: full-start / full-end;
+    background-color: #353535; // Dark background color for the section
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr; // Three columns with the middle column being the widest
+    grid-template-rows: auto auto; // Two rows: one for the title and one for the content
+    align-items: stretch; // Ensure all columns stretch to the same height
+    padding: 2rem 5rem; // Padding around the content
+    gap: 2rem; // Space between grid items
+    color: #fff; // White text color for contrast
+
+    /* Title styling spanning across all columns */
+    h2 {
+        grid-column: 1 / -1; // Spans all columns
+        text-align: start; // Align text to the start (left)
+    }
+
+    /* Subheading styling */
+    h3 {
+        font-size: 1rem; // Medium font size for subheadings
+    }
+
+    /* Paragraph styling */
+    p {
+        color: $text-color; // Use predefined text color
+        font-size: .9rem; // Slightly smaller font size for paragraphs
+    }
+
+    /* Styling for the first list of benefits */
+    &__list-1 {
+        grid-column: 1 / 2; // Places this element in the first column
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; // Space between items in the list
+        align-self: stretch; // Ensures it stretches to the height of the parent
+        border-left: .2rem solid #fff; // White left border
+        padding: 0 0 0 1rem; // Padding on the left side
+    }
+
+    /* Styling for the central image */
+    &__image {
+        grid-column: 2 / 3; // Places this element in the second (central) column
+        display: flex;
+        justify-content: flex-start; // Align image to the start of the column
+        align-items: center; // Center image vertically within its container
+        height: 100%; // Full height to match the column
+
+        img {
+            width: 100%; // Full width of the container
+            height: auto; // Maintain aspect ratio
+            object-fit: cover; // Cover the container while preserving aspect ratio
+            object-position: top; // Align image to the top of the container
+        }
+    }
+
+    /* Styling for the second list of benefits */
+    &__list-2 {
+        grid-column: 3 / 4; // Places this element in the third column
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; // Space between items in the list
+        align-self: stretch; // Ensures it stretches to the height of the parent
+        border-right: .2rem solid #fff; // White right border
+        padding: 0 1rem 0 0; // Padding on the right side
+    }
+}
+
+/* Media Query for screens 768px and smaller */
+@media (max-width: 768px) {
+
+    .benefits {
+        grid-template-columns: 1fr; // Single column layout for small screens
+        grid-template-rows: auto; // Single row layout
+        padding: 5rem 5rem; // Increased padding for better spacing on mobile
+
+        /* Adjustments for smaller screens */
+        &__list-1,
+        &__image,
+        &__list-2 {
+            grid-column: 1 / -1; // Span all columns (single column layout)
+        }
+    }
+}
+
+
+/* Demo Section Styling */
+.demo {
+    grid-column: full-start / full-end; // Full-width column in grid layout
+    background-color: $color-secondary; // Background color defined by a variable
+    padding: 2rem 5rem 2rem 0; // Padding around the section: top, right, bottom, left
+    color: #fff; // Text color set to white
+
+    display: grid; // Use grid layout
+    grid-template-columns: 2fr 1fr; // Two columns: first column is twice as wide as the second
+
+    /* Paragraph styling */
+    p {
+        color: $text-color; // Use predefined text color for paragraphs
+    }
+
+    /* Anchor link styling */
+    a {
+        text-decoration: none; // Remove underline from links
+        color: #fff; // Set link color to white
+    }
+
+    a:active,
+    a:visited{
+        color: #fff;
+    }
+
+    /* Image container styling */
+    &__image {
+        img {
+            height: 100%; // Full height of the container
+            width: 100%; // Full width of the container
+            object-fit: cover; // Cover the container while preserving aspect ratio
+        }
+    }
+
+    /* Content container styling */
+    &__content {
+        display: flex; // Use flexbox for alignment
+        flex-direction: column; // Stack items vertically
+        justify-content: center; // Center items vertically
+        align-items: start; // Align items to the start (left)
+        padding: 0 2rem; // Padding on left and right sides
+    }
+}
+
+/* Media Query for screens 768px and smaller */
+@media (max-width: 768px) {
+
+    .demo {
+        grid-template-columns: 1fr; // Single column layout for small screens
+    
+        /* Adjust padding for content on smaller screens */
+        &__content {
+            padding: 0 4rem 3rem 4rem; // Increased padding on left and right, with bottom padding
+        }
+    }
+}
+
+
+/* Testimonials Section Styling */
+.testimonials {
+    grid-column: full-start / full-end; // Full-width column in grid layout
+    background-color: #353535; // Dark gray background color
+    padding: 7.5rem 5rem; // Padding around the section: top, right, bottom, left
+    color: #fff; // Text color set to white
+
+    /* Title styling */
+    h2 {
+        font-size: 2rem; // Font size for the title
+        padding: 0 0 2rem 0; // Padding: top, right, bottom, left
+    }
+
+    /* Paragraph styling */
+    p {
+        color: $text-color; // Use predefined text color for paragraphs
+    }
+
+    /* Content grid layout */
+    &__content {
+        display: grid; // Use grid layout
+        grid-template-columns: repeat(3, 1fr); // Three equal-width columns
+        column-gap: 5rem; // Space between columns
+        padding: 0 5rem; // Padding on left and right sides
+
+        /* Card styling within content */
+        &-card {
+            background-color: $color-secondary; // Background color for cards
+            padding: 1rem 2rem; // Padding inside cards
+            border-radius: 2rem; // Rounded corners for cards
+            box-shadow: 0 0 1rem #00000065; // Shadow effect around cards
+            box-sizing: border-box; // Include padding and border in element's total width and height
+            word-wrap: break-word; // Ensure long words break to prevent overflow
+            cursor: pointer; // Change cursor to pointer on hover
+
+            transition: all .3s; // Smooth transition for hover effects
+
+            /* Quote icon styling within card */
+            &--quote {
+                i {
+                    font-size: 5rem; // Large font size for quote icon
+                    color: $color-primary; // Primary color for the quote icon
+                }
+            }
+
+            /* Stars styling within card */
+            &--stars {
+                color: $color-primary; // Primary color for the stars
+            }
+        }
+
+        /* Hover effect for cards */
+        &-card:hover {
+            transform: scale(1.1); // Slightly enlarge the card on hover
+            box-shadow: 0 0 1rem $color-primary; // Change shadow color on hover
+        }
+    }
+}
+
+/* Media Query for screens 1022px and smaller */
+@media (max-width: 1022px) {
+    .testimonials {
+        &__content {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Responsive column layout with min-max width
+            row-gap: 2rem; // Space between rows
+            padding: 0; // Remove padding on small screens
+
+            &-card {
+                box-shadow: 0 0 1rem #00000065; // Maintain shadow effect for cards
+            }
+        }
+    }
+}
+
+/* Media Query for screens 768px and smaller */
+@media (max-width: 768px) {
+    .testimonials {
+        &__content {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); // Responsive column layout with smaller min-width
+            row-gap: 2rem; // Space between rows
+            padding: 0; // Remove padding on small screens
+
+            &-card {
+                box-shadow: 0 0 1rem #00000065; // Maintain shadow effect for cards
+            }
+        }
+    }
+}
+
+
+/* Call to Action Section Styling */
+.cta {
+    grid-column: full-start / full-end; // Full-width column in grid layout
+    background-color: $color-secondary; // Background color for the CTA section
+    height: 100%; // Full height of the parent container
+    color: #fff; // Text color set to white
+
+    /* Content grid layout within CTA section */
+    &__content {
+        display: grid; // Use grid layout
+        grid-template-columns: 2fr 1fr; // Two columns: 2 parts for image, 1 part for text
+
+        /* Image styling within content */
+        &-image {
+            grid-column: 1 / 2; // Span the first column
+            
+            img {
+                height: 100%; // Full height of the parent container
+                width: 100%; // Full width of the parent container
+                object-fit: cover; // Ensure image covers its container while maintaining aspect ratio
+            }
+        }
+
+        /* Text styling within content */
+        &-text {
+            grid-column: 2 / 3; // Span the second column
+            display: flex; // Use flexbox for layout
+            flex-direction: column; // Stack children vertically
+            align-items: start; // Align children to the start of the container
+            justify-content: center; // Center children vertically
+            padding: 0 4rem; // Padding on left and right sides
+
+
+            a:active,
+            a:visited {
+                color: #fff;
+                border: none;
+            }
+
+            /* Heading styling */
+            h2 {
+                font-size: 1.8rem; // Font size for heading
+            }
+
+            /* Paragraph styling */
+            p {
+                color: $text-color; // Use predefined text color for paragraphs
+            }
+        }
+    }
+}
+
+/* Media Query for screens 768px and smaller */
+@media (max-width: 768px) {
+    .cta {
+        &__content {
+            display: grid; // Reuse grid layout
+            grid-template-columns: 1fr; // Single column layout for small screens
+
+            /* Reorder text and image */
+            &-text {
+                order: 1; // Text appears first
+                padding: 7rem 5rem; // Increased padding for mobile view
+                grid-column: 1 / -1; // Span the full width
+            }
+
+            &-image {
+                grid-column: 1 / -1; // Span the full width
+                order: 2; // Image appears second
+            }
+        }
+    }
+}
+

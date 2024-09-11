@@ -1,0 +1,96 @@
+/* Footer Styles */
+.footer {
+    grid-column: full-start / full-end; // Span the full width of the grid
+    background-color: #353535; // Dark background color for the footer
+    padding: 2rem 5rem; // Padding around the footer content
+    color: #fff; // White text color
+
+    display: grid; // Use grid layout for the footer
+    grid-template-columns: repeat(2, 1fr); // Two equal-width columns
+
+    /* Footer Content Section */
+    &__content {
+        grid-column: 1 / -1; // Span full width of the grid
+        display: flex; // Use flexbox layout
+        justify-content: space-between; // Space items evenly between start and end
+        padding: 0 0 2.5rem 0; // Padding at the bottom
+
+        &-about {
+            padding: 0 15rem 0 0; // Right padding for 'about' section
+        }
+
+        p {
+            color: $text-color; // Text color for paragraphs in the content
+        }
+    }
+
+    /* Footer Bottom Section */
+    &__foot {
+        grid-column: 1 / -1; // Span full width of the grid
+        display: flex; // Use flexbox layout
+        justify-content: space-between; // Space items evenly between start and end
+        border-top: .2rem solid #fff; // White border at the top
+        padding: 2.5rem 0 0 0; // Padding at the top
+
+        &-cards {
+            span {
+                i {
+                    margin: 0 .5rem; // Horizontal margin for icons
+                    font-size: 1.5rem; // Font size for icons
+                    color: $color-primary; // Primary color for icons
+                }
+            }
+        }
+
+        span i {
+            cursor: pointer; // Pointer cursor for interactive icons
+            transition: all .3s; // Smooth transition for icon states
+        }
+
+        span i:hover {
+            font-size: 2rem; // Increase font size on hover
+            color: #fff; // Change icon color on hover
+        }
+    } 
+}
+
+.site-info {
+
+
+    a {
+        color: #fff;
+        text-decoration: none;
+
+        transition: all .3s;
+    }
+
+    a:visited {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $color-primary;
+        transform: skew(20deg) ;
+    }
+
+
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 1rem; // Reduced padding for smaller screens
+
+        &__content {
+            grid-column: 1 / -1; // Span full width of the grid
+            display: flex; // Use flexbox layout
+            justify-content: space-between; // Space items evenly between start and end
+            padding: 0 0 2.5rem 0; // Padding at the bottom
+
+            &-about {
+                padding: 0 1rem 0 0; // Reduced right padding for 'about' section on mobile
+            }
+        } 
+    }
+}

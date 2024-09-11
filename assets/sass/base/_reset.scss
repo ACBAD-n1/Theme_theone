@@ -1,0 +1,23 @@
+/* Global body styling */
+
+/* Remove default margin and padding to ensure consistency across browsers */
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    
+    /* Ensure that the width and height of elements include padding and borders */
+    box-sizing: border-box; /* Makes width and height calculations more predictable */
+    
+    /* Prevent horizontal scrollbars from appearing */
+    overflow-x: hidden; /* Hides any content that overflows horizontally */
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+

@@ -1,0 +1,33 @@
+/* Black Button Styles */
+.btn__black {
+    border: none; // Remove default border for a cleaner look
+    background-color: $color-primary; // Set background color using the primary color variable
+    padding: .5rem 2rem; // Add padding around the text: 0.5rem top and bottom, 2rem left and right
+    color: #fff; // Set text color to white
+    border-radius: 5rem; // Apply a rounded border with a radius of 5rem on all corners
+    cursor: pointer; // Change cursor to a pointer to indicate it's clickable
+    position: relative;
+
+    transition: all .3s; // Smooth transition for all properties over 0.3 seconds for hover effects
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    i {
+        padding: 0 1rem 0 0;
+        font-size: 1.2rem;
+    }
+}
+
+/* Hover State for the Black Button */
+.btn__black:hover {
+    color: $color-primary; // Change text color to the primary color on hover
+    background-color: $color-secondary; // Change background color to the secondary color on hover
+    box-shadow: 0 0 .2rem $color-primary; // Add a subtle shadow with the primary color on hover
+
+    a {
+        color: $color-primary;
+    }
+}

@@ -1,0 +1,30 @@
+.site-main {
+    grid-column: full-start / full-end;
+    background-color: $color-secondary;
+    padding: 5rem;
+    min-height: 100vh;
+    height: 100%;
+    color: #fff;
+
+
+    a {
+        text-decoration: none;
+        color: $color-primary;
+    }
+
+    a:hover {
+        color: #fff;
+    }
+
+    a:visited {
+        color: fff;
+    }
+
+    button {
+        a {
+            color: #fff;
+        }
+    }
+
+}
+

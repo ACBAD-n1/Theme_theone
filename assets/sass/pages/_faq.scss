@@ -1,0 +1,128 @@
+/* FAQ Section Styling */
+.faq {
+    grid-column: full-start / full-end; // Full-width column in grid layout
+    background-color: $color-secondary; // Background color for the FAQ section
+    min-height: 100vh; // Full viewport height
+    height: 100%;
+    padding: 5rem 5rem 10rem 5rem; // Padding around the content
+    display: flex; // Flexbox layout
+    flex-direction: column; // Stack children vertically
+    justify-content: center; // Center children vertically
+    align-items: stretch; // Stretch children to fill the width
+    color: #fff; // Text color set to white
+
+    /* Heading styling */
+    h1 {
+        font-family: "Karantina", system-ui; // Font family for the heading
+        font-size: 3rem; // Font size for the heading
+    }
+
+    /* FAQ tab styling */
+    &__tab {
+        position: relative; // Relative positioning for absolute child elements
+        background-color: #353535; // Background color of the tab
+        box-shadow: 0 0 1rem #00000041; // Box shadow for depth
+        border-radius: 1rem; // Rounded corners
+        padding: .5rem 1rem 1rem 1rem; // Padding inside the tab
+        margin: 1rem 0; // Margin between tabs
+
+        a:visited {
+            color: fff;
+        }
+
+        /* Number circle styling */
+        span {
+            background-color: #fff; // White background for the circle
+            padding: .5rem; // Padding inside the circle
+            display: flex; // Flexbox for centering
+            justify-content: center; // Center content horizontally
+            align-items: center; // Center content vertically
+            color: $color-primary; // Primary color for the number
+            font-weight: 700; // Bold font weight
+        }
+
+        /* Question heading styling */
+        h3 {
+            color: $text-color; // Text color for the question
+            font-family: "Karantina", system-ui; // Font family for the heading
+            font-size: 1.5rem; // Font size for the question
+            font-weight: 400; // Normal font weight
+            padding: 0 .5rem; // Padding on left and right
+        }
+
+        /* Answer paragraph styling */
+        p {
+            padding: 0 2.5rem; // Padding on left and right
+        }
+
+        /* Hidden content styling */
+        .content {
+            max-height: 0; // Initially hidden
+            transition: all 1s; // Smooth transition for height change
+            overflow: hidden; // Hide overflowing content
+        }
+
+        /* Remove default radio button styling */
+        input {
+            appearance: none; // Remove default appearance
+        }
+
+        /* Label styling */
+        label {
+            display: flex; // Flexbox for alignment
+            align-items: center; // Center content vertically
+        }
+
+        /* Plus sign indicator styling */
+        label::after {
+            content: '+'; // Plus sign
+            position: absolute; // Absolute positioning
+            right: 2rem; // Position to the right
+            top: 1rem;
+            font-size: 2rem; // Font size for the plus sign
+            color: $color-primary; // Primary color for the plus sign
+            transition: all 1s; // Smooth transition for color change
+        }
+    }
+
+    /* Hover effect for FAQ tab */
+    &__tab:hover label::after {
+        color: #fff; // Change plus sign color on hover
+    }
+
+    /* Expand content when input is checked */
+    &__tab input:checked ~ label::after {
+        transform: rotate(135deg); // Rotate plus sign when checked
+    }
+
+    &__tab input:checked ~ .content {
+        max-height: 100vh; // Expand content to full viewport height
+    }
+
+    /* Space below the FAQ section */
+    &__space {
+        padding: 5rem 0; // Padding on top and bottom
+    }
+}
+
+/* Media Query for screens 768px and smaller */
+@media (max-width: 768px) {
+
+    .faq {
+        padding: 2rem 2rem 5rem 2rem; // Padding around the content
+
+
+                /* Plus sign indicator styling */
+                label::after {
+                    content: '+'; // Plus sign
+                    position: absolute; // Absolute positioning
+                    right: 1rem; // Position to the right
+                    top: 0rem;
+                    font-size: 2rem; // Font size for the plus sign
+                    color: $color-primary; // Primary color for the plus sign
+                    transition: all 1s; // Smooth transition for color change
+                }
+
+        }
+
+}
