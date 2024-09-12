@@ -126,3 +126,16 @@
         }
 
 }
+
+/* Media Query for screens 405px and smaller */
+@media (max-width: 405px) {
+
+    .faq {
+
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+    
+    }
+
+}

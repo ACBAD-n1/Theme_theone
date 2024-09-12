@@ -31,3 +31,14 @@
         color: $color-primary;
     }
 }
+
+
+/* Media Query for screens 405px and smaller */
+@media (max-width: 405px) {
+
+    .btn__black i {
+        padding: 0 0rem 0 0;
+        font-size: 1.2rem;
+    }
+
+}

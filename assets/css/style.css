@@ -19,7 +19,9 @@ body {
   scroll-behavior: smooth; }
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  /* Hides any content that overflows horizontally */ }
 
 *,
 *::before,
@@ -52,6 +54,12 @@ html {
   box-shadow: 0 0 0.2rem #A238FF; }
   .btn__black:hover a {
     color: #A238FF; }
+
+/* Media Query for screens 405px and smaller */
+@media (max-width: 405px) {
+  .btn__black i {
+    padding: 0 0rem 0 0;
+    font-size: 1.2rem; } }
 
 /* Header Styles */
 .header {
@@ -95,8 +103,9 @@ nav.scrolled {
   font-size: 1.5rem;
   font-weight: bold; }
   .nav-logo img {
-    height: 5rem;
-    width: 100%; }
+    height: auto;
+    max-width: 13rem;
+    width: auto; }
 
 /* Main Navigation Styles */
 ul.nav-menu {
@@ -183,7 +192,9 @@ ul.nav-menu li:hover .dropdown-content {
     padding: .5rem 0;
     width: 100%; }
   .mobile-menu-icon {
-    display: block; } }
+    display: block; }
+  .nav-logo img {
+    max-width: 12rem; } }
 
 /* Footer Styles */
 .footer {
@@ -250,7 +261,14 @@ ul.nav-menu li:hover .dropdown-content {
 .container {
   display: grid;
   /* Define the rows in the grid */
-  grid-template-rows: 0 100vh auto;
+  grid-template-rows: 0 minmax(40rem, 100vh) auto;
+  /* Define the columns in the grid */
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-start] 1fr [full-end]; }
+
+.page_container {
+  display: grid;
+  /* Define the rows in the grid */
+  grid-template-rows: 7vh 100vh auto;
   /* Define the columns in the grid */
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-start] 1fr [full-end]; }
 
@@ -355,6 +373,13 @@ ul.nav-menu li:hover .dropdown-content {
       font-size: 2rem;
       color: #A238FF;
       transition: all 1s; } }
+
+/* Media Query for screens 405px and smaller */
+@media (max-width: 405px) {
+  .faq {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; } }
 
 /* Hero Section Styling */
 .hero {
@@ -674,3 +699,9 @@ mark, ins {
   .is-medium table.wc-block-cart-items .wc-block-cart-items__row, .is-mobile table.wc-block-cart-items .wc-block-cart-items__row, .is-small table.wc-block-cart-items .wc-block-cart-items__row {
     display: flex !important;
     flex-wrap: wrap; } }
+
+@media (max-width: 635px) {
+  #post-17 {
+    background-color: #353535;
+    box-shadow: 0 0 1rem #00000083;
+    padding: 1rem; } }

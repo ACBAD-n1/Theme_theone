@@ -28,3 +28,11 @@ mark, ins {
         flex-wrap: wrap;
     }
 }
+
+@media (max-width: 635px) {
+    #post-17 {
+        background-color: #353535;
+        box-shadow: 0 0 1rem #00000083;
+        padding: 1rem;
+    }
+}

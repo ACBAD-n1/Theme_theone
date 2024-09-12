@@ -48,8 +48,9 @@ nav.scrolled {
     font-weight: bold; // Make the font bold
 
     img {
-        height: 5rem; // Set logo image height
-        width: 100%; // Make image width responsive to parent container
+        height: auto; // Maintain the aspect ratio of the image
+        max-width: 13rem; // Set a maximum width for the logo to prevent it from stretching too much
+        width: auto; // Set the width to auto to avoid stretching
     }
 }
 
@@ -166,5 +167,9 @@ ul.nav-menu li:hover .dropdown-content {
         display: block; // Show mobile menu icon on mobile
     }
 
+    .nav-logo img {
+        max-width: 12rem; // Adjust the logo size for smaller screens
+    }
 
 }
+
