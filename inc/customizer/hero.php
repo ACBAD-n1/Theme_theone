@@ -1,5 +1,9 @@
 <?php 
-
+/**
+ * TheOne Theme Home Hero Customizer
+ *
+ * @package TheOne
+ */
 
 //** */
 //** Hero Section */

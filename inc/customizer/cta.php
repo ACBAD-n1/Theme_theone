@@ -1,4 +1,9 @@
 <?php 
+/**
+ * TheOne Theme Home CTA Customizer
+ *
+ * @package TheOne
+ */
 
 //** */
 //**  cta Section */

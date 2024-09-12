@@ -1,4 +1,13 @@
 <?php 
+/**
+ * The template for displaying the front page
+ *
+ * This is the template that displays the Home page
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package TheOne
+ */
 
 get_header(); 
 
@@ -57,7 +66,7 @@ $path = get_template_directory_uri();
 
 
 <!-- Benefits section: Showcases the advantages of using the WordPress theme -->
-<div class="benefits">
+<div id="benefits" class="benefits">
 
     <!-- Section heading: Introduces the benefits of the WordPress theme -->
     <h2 data-aos="fade-right" data-aos-duration="1500">
@@ -192,7 +201,7 @@ $path = get_template_directory_uri();
             if($demo_button) { ?>
 
                 <button class="btn__black animate__animated animate__backInUp animate__delay-3s">
-                    <a href="<?php echo esc_url(get_theme_mod('demo_button_url', '#')); ?>"><?php echo esc_html(get_theme_mod('demo_button', 'View Live Demo')); ?></a>
+                    <a href="<?php echo esc_url(get_theme_mod('demo_button_url', '#')); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html(get_theme_mod('demo_button', 'View Live Demo')); ?></a>
                 </button>
 
             <?php } else{ ?>

@@ -1,4 +1,9 @@
 <?php 
+/**
+ * TheOne Theme Home testimonial Customizer
+ *
+ * @package TheOne
+ */
 
 //** */
 //** Testimonials Section */

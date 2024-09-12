@@ -1,4 +1,9 @@
 <?php 
+/**
+ * TheOne Theme Full Faq Customizer
+ *
+ * @package TheOne
+ */
 
 //** */
 //** Faq up Section */

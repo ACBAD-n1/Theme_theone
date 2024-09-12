@@ -15,7 +15,11 @@ body {
   /* Makes width and height calculations more predictable */
   /* Prevent horizontal scrollbars from appearing */
   overflow-x: hidden;
-  /* Hides any content that overflows horizontally */ }
+  /* Hides any content that overflows horizontally */
+  scroll-behavior: smooth; }
+
+html {
+  scroll-behavior: smooth; }
 
 *,
 *::before,

@@ -1,4 +1,9 @@
 <?php 
+/**
+ * TheOne Theme Footer Customizer
+ *
+ * @package TheOne
+ */
 
 //** */
 //** Footer up Section */

@@ -1,4 +1,9 @@
 <?php 
+/**
+ * Functions which Integrat automatic button to add card and go to process page
+ *
+ * @package TheOne
+ */
 
 function add_product_to_cart() {
    // Check if WooCommerce is active

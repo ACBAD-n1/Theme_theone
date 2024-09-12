@@ -1,4 +1,9 @@
 <?php 
+/**
+ * All Home Faq and others customizer function, for readability matter they are include from a separate files
+ *
+ * @package TheOne
+ */
 
 function theone_customize_register_add($wp_customize) {
 

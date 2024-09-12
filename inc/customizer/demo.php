@@ -1,4 +1,9 @@
 <?php 
+/**
+ * TheOne Theme Demo Customizer
+ *
+ * @package TheOne
+ */
 
 //** */
 //** Live Demo Section */

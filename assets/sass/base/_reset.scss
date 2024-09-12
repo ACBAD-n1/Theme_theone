@@ -10,6 +10,12 @@ body {
     
     /* Prevent horizontal scrollbars from appearing */
     overflow-x: hidden; /* Hides any content that overflows horizontally */
+
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 
@@ -20,4 +26,6 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+
 

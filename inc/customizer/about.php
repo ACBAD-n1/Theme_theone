@@ -1,4 +1,9 @@
 <?php 
+/**
+ * TheOne Theme home about Customizer
+ *
+ * @package TheOne
+ */
 
 //** */
 //** About Section */
